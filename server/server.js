@@ -8,6 +8,10 @@
 // app.listen(5000, ()=>{console.log("Server on Port 5000")})
 const express = require("express");
 const app = express();
+const PORT = process.env.PORT || 5000
+// your code
+
+
 
 // Define a route that generates mock stock data
 // Define a route that generates mock stock data
@@ -65,6 +69,6 @@ function getRandomNumber(min, max, decimalPlaces) {
   return +(Math.random() * (max - min) + min).toFixed(decimalPlaces);
 }
 
-app.listen(5000, () => {
-  console.log("Server on Port 5000");
+app.listen(PORT, () => {
+  console.log(`server started on port ${PORT}`);
 });
